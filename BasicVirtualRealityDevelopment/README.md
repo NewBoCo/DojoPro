@@ -161,15 +161,73 @@ Alternatively, you may follow the directions provided by Google [here](https://d
 	* We need a `Transform` so we know where to throw the ball from. We'll call it `throwPosition`.
 	* We need a `float` to represent how hard we'll throw the ball.  We'll call it `throwForce`.
 	 
-	 ![](./tutorial-pics/vs-add-throw-vars.png)
+	```c#
+	using UnityEngine;
+	using System.Collections;
+
+	public class ThrowBall : MonoBehaviour {
+
+		public Rigidbody ball;
+		public Transform throwPosition;
+		public float throwForce = 1000f;
+		
+		// Use this for initialization
+		void Start()
+		{
+		
+		}
+		
+		// Update is called once per frame
+		void Update ()
+		{
+		
+		}
+	}
+	```	
 	 
 6. Remove the 'Start' method, we won't be needing it.
 
-	![](./tutorial-pics/vs-remove-start.png)
+	```c#
+	using UnityEngine;
+	using System.Collections;
+
+	public class ThrowBall : MonoBehaviour {
+
+		public Rigidbody ball;
+		public Transform throwPosition;
+		public float throwForce = 1000f;
+		
+		// Update is called once per frame
+		void Update ()
+		{
+		
+		}
+	}
+	```	
 	
 7. In the 'Update' method, we need to create a ball and throw it if the button is pressed.  Add the following code to the 'Update' method.
 
-	![](./tutorial-pics/vs-update-throw.png)
+	```c#
+	using UnityEngine;
+	using System.Collections;
+
+	public class ThrowBall : MonoBehaviour {
+
+		public Rigidbody ball;
+		public Transform throwPosition;
+		public float throwForce = 1000f;
+		
+		// Update is called once per frame
+		void Update ()
+		{
+			if (Input.GetMouseButtonDown(0))
+			{
+				Rigidbody thrownBall = Instantiate(ball, throwPosition.position, throwPosition.rotation) as Rigidbody;
+				thrownBall.AddForce(throwPosition.forward * throwForce);
+			}
+		}
+	}
+	```	
 	
 8. Finally, in the project window, select the top-level **Assets** folder.  Then drag the **ThrowBall** script into the **Scripts** folder, just to keep things tidy.
 	
@@ -213,17 +271,41 @@ Alternatively, you may follow the directions provided by Google [here](https://d
 	
 ## Make the Balls Mortal
 
-1. If we just continue throwing balls they will stay around in our world as long as it's running.  After a while this will slow down our game and clutter it up.  Therefore, let's make the balls destroy themselves after a short time.  Start by selecting the **Ball** prefab and adding a new script component named `DestroyBall`.
+1. If we just continue throwing balls they will stay around in our world as long as it's running.  After a while this will slow down our game and clutter it up.  Therefore, let's make the balls destroy themselves after a short time.  Start by selecting the **Ball** prefab and adding a new script component named `DestroyBall`.  Open the script in Visual Studio.
 
 2. We don't need the `Update` method so delete it.
 
-	![](./tutorial-pics/unity-remove-update.png)
+	```c#
+	using UnityEngine;
+	using System.Collections;
+
+	public class DestroyBall : MonoBehaviour {
+
+		// Use this for initialization
+		void Start ()
+		{
+
+		}
+	}
+	```	
 
 3. Next, we'll tell the ball to destroy itself by calling the `Destroy` method and giving it 5 seconds to live.
 
-	![](./tutorial-pics/unity-destroy-ball.png)
+	```c#
+	using UnityEngine;
+	using System.Collections;
+
+	public class DestroyBall : MonoBehaviour {
+
+		// Use this for initialization
+		void Start ()
+		{
+			Destroy(gameObject, 5.0f);
+		}
+	}
+	```
 	
-4. Press play and shoot a few balls.  After 5 seconds you should see the balls removing themselves from the hierarchy window and disappearing from the scene.
+4. Press **play** and shoot a few balls.  After 5 seconds you should see the balls removing themselves from the hierarchy window and disappearing from the scene.
 
 ## Add a Reticle
 
