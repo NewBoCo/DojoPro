@@ -18,17 +18,21 @@ You will need to download and install the following software in the order provid
 
 Follow the link above  and choose **Visual Studio Community** and follow the directions.
 
-### 2. [Android SDK](https://developer.android.com/studio/index.html)
+### 2. [Java JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+
+Get the latest Java JDK for your operating system.
+
+### 3. [Android SDK](https://developer.android.com/studio/index.html)
 
 Follow the link and download and install **Android Studio**.
 
-### 3. [Unity 3D Daydream Technical Preview](https://unity3d.com/partners/google/daydream)
+### 4. [Unity 3D Daydream Technical Preview](https://unity3d.com/partners/google/daydream)
 
 Scroll down close to the bottom of the page to the download section.  Download and install the latest release for your operating system.  Make sure that **Android Build Support** is enabled as shown below.
 
 ![](./tutorial-pics/unity-android-support.png)
 
-### 4. [Google VR SDK for Unity](https://developers.google.com/vr/unity/download#google-vr-sdk-for-unity)
+### 5. [Google VR SDK for Unity](https://developers.google.com/vr/unity/download#google-vr-sdk-for-unity)
 
 Download this Unity package to a folder where it is easy to find later, for instance, your **Desktop**.
 
@@ -63,8 +67,6 @@ Alternatively, you may follow the directions provided by Google [here](https://d
 5. Also make sure to change the **Bundle Identifier** and set the **Minimum API Level** to **Android 4.4 (API level 19)**.
 
 	![](./tutorial-pics/unity-minimum-api.png)
-	
-6. 
 	
 ## Importing the Google VR SDK
 
