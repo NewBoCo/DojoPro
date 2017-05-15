@@ -26,7 +26,7 @@ Get the latest Java JDK for your operating system.
 
 Follow the link and download and install **Android Studio**.
 
-### 4. [Unity 3D Daydream Technical Preview](https://unity3d.com/partners/google/daydream)
+### 4. [Unity 3D 5.6](https://unity3d.com/get-unity/download)
 
 Scroll down close to the bottom of the page to the download section.  Download and install the latest release for your operating system.  Make sure that **Android Build Support** is enabled as shown below.
 
@@ -42,7 +42,7 @@ Alternatively, you may follow the directions provided by Google [here](https://d
 
 ## Creating a Project
 
-1. Start **Unity Daydream Preview**.  Choose new project and give your project a name and a location.
+1. Start **Unity 3D**.  Choose new project and give your project a name and a location.
 
 	![](./tutorial-pics/unity-new-project.png)
 

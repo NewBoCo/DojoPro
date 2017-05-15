@@ -1,5 +1,6 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class ThrowBall : MonoBehaviour {
 
@@ -10,10 +11,10 @@ public class ThrowBall : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (Input.GetMouseButtonDown(0))
+		if(Input.GetMouseButtonDown(0))
         {
-            Rigidbody thrownBall = Instantiate(ball, throwPosition.position, throwPosition.rotation) as Rigidbody;
+            Rigidbody thrownBall = Instantiate(ball, throwPosition.position, throwPosition.rotation);
             thrownBall.AddForce(throwPosition.forward * throwForce);
         }
-    }
+	}
 }
