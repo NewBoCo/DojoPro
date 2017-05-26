@@ -89,16 +89,6 @@ Alternatively, you may follow the directions provided by Google [here](https://d
 	![](./tutorial-pics/unity-folders.png)
 	
 2. Finally, select **File->Save Scene** and save the scene as `MyScene` in the **Scenes** directory.
-
-## Setting Up the VR View
-
-1. In order to be able to see how the Cardboard app will look on the phone, we want to add a game object that will render stereo in the Unity editor game mode.  To do this click on the **GoogleVR** folder in the project window.  In the search bar (top right of the project window) type `gvrviewer`.  Drag the **GvrViewer** prefab from the project window to the hierarchy window.
-
-	![](./tutorial-pics/unity-drag-gvrviewer.png)
-	
-2. The **GvrViewerMain** game object should have been created in the hierarchy view.  Click the triangular play button above the scene view.  In a few moments you should see a stereo render of your scene.
-
-	![](./tutorial-pics/unity-stereo-view.png)
 	
 ## Create the Ground Plane
 
