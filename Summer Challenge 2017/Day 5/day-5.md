@@ -1,1 +1,1 @@
-# Summer Challenge 2017 Day 5
+# Day 5: Work Assets, App Settings, and Yet More Customization
