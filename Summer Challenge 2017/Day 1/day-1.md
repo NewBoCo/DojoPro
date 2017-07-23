@@ -1,4 +1,4 @@
-# Summer Challenge 2017 Day 1
+# Day 1: Prerequisites, Fundamentals, and Gear
 
 Welcome to VR with Unity!  Today we will do the following.
 
