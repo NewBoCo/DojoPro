@@ -1,4 +1,4 @@
-# Summer Challenge 2017 Day 2
+# Day 2: Develop, Play, and Customize
 
 Welcome back for day 2!  Today we will:
 
@@ -251,3 +251,10 @@ Welcome back for day 2!  Today we will:
 ## PLAY!
 
 Your game is now installed on your phone.  Find it in your applications, start it, and put it into your Google Cardboard and play!
+
+## Now it's time to customize your game.  Below are some suggestions.
+
+* Now that you know how to place cubes there are no limits to how many you can set up and where you can put them.
+* Can you set up other shapes to throw balls at?
+* Can you throw different shapes?
+* What happens if you modfy the physics (throwForce or the gravity settings on the blocks)?
