@@ -90,6 +90,12 @@ Alternatively, you may follow the directions provided by Google [here](https://d
 	
 2. Finally, select **File->Save Scene** and save the scene as `MyScene` in the **Scenes** directory.
 	
+## Setting Up the VR View
+
+1. In order to be able to see how the Cardboard app will look and how navigation will work on the phone, we want to add a game object that will emulate the Cardboard app in the Unity editor game mode.  To do this click on the **GoogleVR** folder in the project window.  In the search bar (top right of the project window) type `gvrEditorEmulator`.  Drag the **gvrEditorEmulator** prefab from the project window to the hierarchy window.
+
+2. We need to hack the GvrEditorEmulator because it repositions the camera when we don't want it to.  Open the GvrEditorEmulator script and comment out lines 88-90 and line 103.
+	
 ## Create the Ground Plane
 
 1. In the hierarchy window right-click in a blank area and select **3D Object->Plane**.
