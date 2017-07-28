@@ -22,11 +22,19 @@ So far our only interaction with our scene has been to throw balls at the blocks
 
 1. You may have noticed that the new button is huge and was created out of view.  To fix this we'll start by setting the position of the button to `(0, 0, 0)` in the inspector view.
 
-2. Next, set the **Width* to `160` and **Height** to `30`.
+2. Next, set the **Width** to `160` and **Height** to `30`.
 
 Don't worry if the button temporarily disappeared.  The button is attached to the canvas which we also need to resize and reposition.  We'll do that next.
 
 ## Setting Up the Canvas
+
+Before we can adjust the position of the canvas we need to put it in the correct coordinate system
+
+1. In the **Canvas** component in the inspector view there is an attribute labeled **Render Mode**.  Click the drop down.
+
+2. Select **World Space**.
+
+3. Finally, drag the **Main Camera** object from the hierarchy view and drop it on the **Event Camera** property in the inspector view.
 
 We'll need to resize the canvas so that it's easier to move around, looks right, and doesn't get in the way of objects in our scene.
 
@@ -44,23 +52,17 @@ Now the canvas is the correct size and the button should be visible.  However, i
 
 This should put the button off to right a bit and rotate it so that it is close to facing us.  If you've made a lot of modifications it may be in front of other objects or even occluded by them.  You can either change where you put the canvas, or you can move/remove the other objects.
 
-We will adjust two other settings on the canvas.  They're meaning will become clear later as we continue setting up the UI.
-
-1. In the **Canvas** component in the inspector view there is an attribute labeled **Render Mode**.  Click the drop down.
-
-2. Select **World Space**.
-
-3. Finally, drag the **Main Camera** object from the hierarchy view and drop it on the **Event Camera** property in the inspector view.
-
 ## Adding an Event System
 
-Now we have a button on a canvas, but we need to make it do something.  The way that UI objects and other objects interact is through events.  In order for our button to use events we need to add an event system to our scene.
+Now we have a button on a canvas, but we need to make it do something.  The way that UI objects and other objects interact is through events.  In order for our button to use events we need to add an event system to our scene.  You may have noticed that we already have an event scene in our hierarchy view.  Unfortunately, it's not the right kind of event system.  We need one that works with Google VR.
 
-1. Select the **Assets** folder in the project view.
+1. Select the existing event system in the hierarchy view and delete it.
 
-2. Go to the search bar in the project view and start typing `GvrEventSystem`.
+2. Select the **Assets** folder in the project view.
 
-3. Select the **GvrEventSystem** prefab and drag it onto the hierarchy view.
+3. Go to the search bar in the project view and start typing `GvrEventSystem`.
+
+4. Select the **GvrEventSystem** prefab and drag it onto the hierarchy view.
 
 ## Making the Button Interactable
 
